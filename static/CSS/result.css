@@ -30,7 +30,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
     max-width: auto;
     width: 100%;
     margin-top: auto;
@@ -42,6 +42,8 @@ body {
     height: 1000px;
     overflow-y: scroll;
     border: 1px solid #ccc;
+    text-align: left;
+    padding-left: 1em;
     border-radius: 10px;
     background-color: #f8f9fa;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
