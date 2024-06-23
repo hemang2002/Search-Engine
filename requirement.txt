@@ -1,0 +1,7 @@
+pandas
+numpy==11.26.4.
+flask
+torch
+transformers
+scikit-learn
+PyPDF2

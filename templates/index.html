@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Search Engine</title>
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel = "stylesheet" href="{{ url_for('static', filename = 'CSS/index.css') }}">
+            
+    </head>
+
+    <body>
+
+        <div class = "container">
+
+            <div class = "logo-container">
+                <img style = "border-radius: 10px;" src = "{{ url_for('static', filename = 'Image/logo.jpg') }}" alt = "Logo" class = "logo">
+            </div>
+            
+            <form id = "upload-form" action = "/result" method = "post" enctype = "multipart/form-data" class = "mb-3">
+            
+                <label for = "file" class = "drop-container" id = "dropcontainer">
+                    <span class = "drop-title">Drop files here</span>
+                    or
+                    <input type = "file" name = "file" id = "file" class = "form-control-file" accept = "application/pdf, text/plain" required>
+                </label>
+            
+                <div id = "filename" class = "alert alert-info" style = "display:none;"></div>
+            
+                <div class = "search-container">
+                    <input type = "text" id = "search-bar" name = "search-bar" class = "form-control mb-3" placeholder = "Search...">
+                    <input  type = "number"  id = "top-bar" name = "top-bar" class = "top_k" placeholder = "Top result..." required>
+                    <button onclick = "performSearch()" class = "btn btn-primary">Search</button>
+                </div>
+            
+            </form>
+        </div>
+        <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </body>
+</html>

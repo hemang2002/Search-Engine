@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Search Results</title>
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'CSS/result.css') }}">
+    
+    </head>
+
+    <body>
+
+        <div class = "container">
+
+            <h1 class = "container-heading">Search Results for "{{ query }}"</h1>
+            
+            <div class = "pdf-viewer">
+                <pre>{{ text }}</pre>
+            </div>
+            
+            <div class = "result-item-container">
+                {% for result in results %}
+                <div class = "result-item">
+                    <div class = "box-content">
+                        <p><strong>Similarity:</strong> {{ result[0] }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    
+    </body>
+
+</html>
