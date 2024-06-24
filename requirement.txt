@@ -1,5 +1,5 @@
 pandas
-numpy==11.26.4.
+numpy==1.26.4.
 flask
 torch
 transformers
